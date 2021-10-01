@@ -3,7 +3,8 @@ const express = require('express');
 const { getPairsOfPlayers } = require('./controller');
 const router = express.Router();
 
-router.get('/', async (req, resp = response, next) => {
+router.get('/api', async (req, resp = response, next) => {
+  console.log('entro')
   try {
     await getPairsOfPlayers(req, resp, next);
   } catch (error) {
